@@ -63,7 +63,7 @@ function App() {
           {pokemonName}
         </div>
       ) : (
-        <p>Loading...</p>
+        <p>Loading.</p>
       )}
     </>
   )
