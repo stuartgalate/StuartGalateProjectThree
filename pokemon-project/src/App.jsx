@@ -26,7 +26,7 @@ import './App.css';
 function App() {
   const [filteredPokemon, setFilteredPokemon] = useState([]);
   const [evolutionChain, setEvolutionChain] = useState(null);
-  const [pokemonName, setPokemonName] = useState('Loading...');
+  const [pokemonName, setPokemonName] = useState('null');
   const [searchTerm, setSearchTerm] = useState('');
   const [pokemonList, setPokemonList] = useState([]);
 
@@ -71,7 +71,7 @@ function App() {
 
   const handleSearch = (searchTerm) => {
     const filtered = pokemonList.filter(pokemon =>
-      pokemon.name.includes(searchTerm.toLowerCase())
+      pokemon.name.startsWith(searchTerm.toLowerCase())
     );
     setFilteredPokemon(filtered);
     setSearchTerm(searchTerm);
@@ -79,18 +79,14 @@ function App() {
   
 
   return (
-    <>
+    <div className='appContainer'>
       <h1>Pokémon React App</h1>
       <SearchBar handleSearch={handleSearch} /> 
-      {evolutionChain ? (
-        <div>
-          {pokemonName}
-        </div>
-      ) : (
-        <p>Loading.</p>
-      )}
-      <PokemonList pokemon={filteredPokemon.length > 0 ? filteredPokemon : pokemonList} />
-    </>
+      <div className='pokemonListContainer'>
+        <PokemonList pokemon={filteredPokemon.length > 0 ? filteredPokemon : pokemonList} />
+      </div>
+      
+    </div>
   );
 }
 

@@ -41,4 +41,18 @@
   color: #888;
 }
 
+.appContainer {
+  text-align: center;
+  padding: 20px;
+}
+
+.pokemonListContainer {
+  max-width: 1200px;
+  margin: 30px auto 0;
+}
+
+html {
+  background-color: white;
+}
+
 
