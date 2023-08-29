@@ -1,20 +1,16 @@
 import React from 'react';
 
-function SearchBar({ handleSearch }) {
-  const handleChange = (event) => {
-    const searchTerm = event.target.value;
-    handleSearch(searchTerm);
-  };
-
+const SearchBar = ({ searchTerm, handleSearch }) => {
   return (
     <div>
       <input
         type="text"
-        placeholder="Search Pokémon..."
-        onChange={handleChange}
+        placeholder="Search Pokemon"
+        value={searchTerm}
+        onChange={(event) => handleSearch(event.target.value)}
       />
     </div>
   );
-}
+};
 
 export default SearchBar;

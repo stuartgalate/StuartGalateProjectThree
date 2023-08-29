@@ -10,7 +10,19 @@ function PokemonList({ pokemon }) {
           width=
           '150'
           height='150'/>
-          {poke.name}
+          <p>Name: {poke.name}</p>
+
+          <p>Abilities: {poke.abilities.map((ability) => ability.ability.name).join(', ')}</p>
+
+          <p>Type: {poke.types.map((type) => type.type.name).join(', ')}</p>
+
+          <ul>
+            {poke.stats.map((stat) => (
+              <li key={stat.stat.name}>
+                {stat.stat.name}: {stat.base_stat}
+              </li>
+            ))}
+          </ul>
         </li>
       ))}
     </ul>

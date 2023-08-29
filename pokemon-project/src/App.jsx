@@ -24,7 +24,7 @@ import './App.css';
 
 
 function App() {
-  const [filteredPokemon, setFilteredPokemon] = useState(null);
+  const [filteredPokemon, setFilteredPokemon] = useState([]);
   const [evolutionChain, setEvolutionChain] = useState(null);
   const [pokemonName, setPokemonName] = useState('Loading...');
   const [searchTerm, setSearchTerm] = useState('');
@@ -42,7 +42,7 @@ function App() {
       const response = await axios.get(`https://pokeapi.co/api/v2/evolution-chain/${evolutionChainId}/`);
       setEvolutionChain(response.data);
       const newName = response.data.chain.species.name;
-      setPokemonName(newName)
+      setPokemonName(newName);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -89,9 +89,9 @@ function App() {
       ) : (
         <p>Loading.</p>
       )}
-      {filteredPokemon && <PokemonList pokemon={filteredPokemon} />}
+      <PokemonList pokemon={filteredPokemon.length > 0 ? filteredPokemon : pokemonList} />
     </>
-  )
+  );
 }
 
 export default App
