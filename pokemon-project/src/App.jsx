@@ -71,7 +71,7 @@ function App() {
 
   const handleSearch = (searchTerm) => {
     const filtered = pokemonList.filter(pokemon =>
-      pokemon.name.includes(searchTerm.toLowerCase())
+      pokemon.name.startsWith(searchTerm.toLowerCase())
     );
     setFilteredPokemon(filtered);
     setSearchTerm(searchTerm);
