@@ -4,25 +4,6 @@ import PokemonList from './PokemonList';
 import SearchBar from './SearchBar'; 
 import './App.css';
 
-// Use the useEffect hook to fetch Pokemon data from API
-// Use AXIOS to perform API call
-// Store Data in state
-
-// Create the search bar
-// Initialize state variable 'searchTerm' to store user input
-// Implement the 'handleChange' function to update the 'searchTerm' state
-// Add the following: <h1> Header Pokémon React App" as the title, searchBar component with the 'handleSearch' function as a prop, a PokemonList component with the `filteredPokemon` as a prop
-
-// Create the SearhBar Component
-// Initialize state variable `searchTerm` to store user input
-// Implement the `handleChange` function to update the `searchTerm` state
-// Render an input element
-
-// Create the PokemonList Component
-// Receive the 'pokemon' prop
-// Render a <ul> element containing a list of <li> elements for each Pokemon in the 'pokemon' prop
-
-
 function App() {
   const [filteredPokemon, setFilteredPokemon] = useState([]);
   const [evolutionChain, setEvolutionChain] = useState(null);
@@ -80,7 +61,7 @@ function App() {
 
   return (
     <div className='appContainer'>
-      <h1>Pokémon React App</h1>
+      <h1 className='appTitle'>Pokémon React App</h1>
       <SearchBar handleSearch={handleSearch} /> 
       <div className='pokemonListContainer'>
         <PokemonList pokemon={filteredPokemon.length > 0 ? filteredPokemon : pokemonList} />

@@ -52,7 +52,96 @@
 }
 
 html {
-  background-color: white;
+  background-color: #1f2933;
 }
+
+/* Styling for title */
+
+.appTitle {
+  font-size: 2.5rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)
+}
+
+/* Styling for Search Bar */
+
+.searchBarContainer {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.searchInput {
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.searchInput::placeholder {
+  color: #999;
+}
+
+/* Styling for Pokemon List */
+
+.pokemonList {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pokemonItem {
+  width: 33.33%;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.pokemonItem img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.pokemonCard {
+border: 2px solid black;
+background-color: white;
+border-radius: 10px;
+padding: 20px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+color: #1f2933;
+}
+
+.pokemonImage {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.pokemonName {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.pokemonDetail {
+  margin-bottom: 5px;
+}
+
+.pokemonStat {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+
+
 
 

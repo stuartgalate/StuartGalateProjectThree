@@ -2,10 +2,11 @@ import React from 'react';
 
 const SearchBar = ({ searchTerm, handleSearch }) => {
   return (
-    <div>
+    <div className='searchBarContainer'>
       <input
+        className='searchInput'
         type="text"
-        placeholder="Search Pokemon"
+        placeholder="Search Pokémon"
         value={searchTerm}
         onChange={(event) => handleSearch(event.target.value)}
       />
